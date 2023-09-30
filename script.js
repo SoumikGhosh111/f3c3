@@ -29,7 +29,7 @@ callingTheData();
 
 async function getCurrentImageOfTheDay(date) {
     try {
-        const endpoint = `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${BackUpKey}`;
+        const endpoint = `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${apiKey}`;
         const response = await fetch(endpoint);
         const result = await response.json();
         console.log(result, "this is async 1");
@@ -43,7 +43,7 @@ async function getCurrentImageOfTheDay(date) {
 
 async function getImageOfTheDay(date) {
     try {
-        const endpoint = `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${BackUpKey}`;
+        const endpoint = `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${apiKey}`;
         const response = await fetch(endpoint);
         const result = await response.json();
         console.log(result, "this is async 2");
